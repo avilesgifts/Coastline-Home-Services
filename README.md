@@ -1,6 +1,6 @@
 # Coastline Referral Co.
 
-A standalone website for a business-to-business referral company serving home service businesses in South Surrey, White Rock and Langley. It's separate from Little Explorers and just shares this repository.
+A standalone website for a business-to-business referral company serving home service businesses in South Surrey, White Rock and Langley.
 
 "Coastline Referral Co." is a working name. Change it in `site.js` (`SITE.NAME`) and in each page's `<title>`.
 
@@ -34,15 +34,19 @@ The revenue model is a flat monthly membership with no per-lead fees, a 90-day f
 4. Add real testimonials and results once you have founding members. Don't publish placeholder or made-up reviews.
 5. Before promising the Smart System's features to clients, pick the tool that will run it (e.g. GoHighLevel, Jobber plus a text-back add-on, or a custom setup), and make sure the listed integrations match what that tool supports.
 
-## Hosting on its own domain
+## Hosting (GitHub Pages)
 
-GitHub Pages serves one custom domain per repository, and this repo's `CNAME` is `littleexplorers-events.com`. Options:
+1. In this repository on GitHub, go to **Settings → Pages**, set **Source** to *Deploy from a branch*, choose `main` and `/ (root)`, then save. The site goes live at `https://<your-username>.github.io/coastline-home-services/`.
+2. **Custom domain (once you've bought one):**
+   - Add a file named `CNAME` at the root of this repo containing just the domain, e.g. `coastlinehomeservices.ca`.
+   - At your domain registrar, add DNS records:
+     - Apex domain (`coastlinehomeservices.ca`): four `A` records pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`
+     - `www` subdomain: a `CNAME` record pointing to `<your-username>.github.io`
+   - Back in **Settings → Pages**, enter the domain, wait for the DNS check, then tick **Enforce HTTPS**.
 
-- **Quickest:** it's live at `littleexplorers-events.com/coastline/` once merged. That works for previewing, but it isn't ideal for a separate brand.
-- **Recommended:** point the new domain at this folder with Netlify, Cloudflare Pages or Vercel (connect this repo and set the publish directory to `coastline/`). This keeps everything in one repo, as requested.
-- **Alternative:** move the folder to its own GitHub repository with its own `CNAME`.
+`.nojekyll` tells GitHub Pages to serve the files as-is.
 
-Preview locally with `npx serve -l 4173 .` from the repo root, then open `http://localhost:4173/coastline/`.
+Preview locally with `npx serve -l 4173 .`, then open `http://localhost:4173/`.
 
 ## Running the network (operations)
 
