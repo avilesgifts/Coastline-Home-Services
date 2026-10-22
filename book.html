@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Strategy Call — Coastline Referral Co.</title>
+  <meta name="description" content="Book a free strategy call to see if your trade is still open in a South Surrey, White Rock or Langley referral network.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="site-nav"></div>
+
+<section class="hero">
+  <div class="wrap grid-2" style="align-items:start">
+    <div>
+      <span class="eyebrow">Free strategy call</span>
+      <h1>Let's see if we're a fit</h1>
+      <p class="lead">A relaxed 20-minute call. No pressure and no pitch deck.</p>
+      <ul class="checks">
+        <li><strong>Seat check:</strong> whether your trade is open in your area</li>
+        <li><strong>Lead audit:</strong> where your best jobs come from today</li>
+        <li><strong>Quick wins:</strong> 2–3 things you can fix this week, whether or not you join</li>
+      </ul>
+    </div>
+    <form class="form-card" data-form="book">
+      <div class="form-grid">
+        <div class="field"><label for="b-name">Your name</label><input id="b-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="b-business">Business name</label><input id="b-business" name="business" required autocomplete="organization"></div>
+        <div class="field"><label for="b-phone">Phone</label><input id="b-phone" name="phone" type="tel" required autocomplete="tel"></div>
+        <div class="field"><label for="b-email">Email</label><input id="b-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="b-trade">Trade</label><input id="b-trade" name="trade" required placeholder="e.g. Plumbing"></div>
+        <div class="field"><label for="b-area">Main service area</label>
+          <select id="b-area" name="area" required>
+            <option value="">Choose…</option>
+            <option>South Surrey / White Rock</option><option>Langley City</option>
+            <option>Langley Township</option><option>Cloverdale</option><option>Multiple areas</option>
+          </select>
+        </div>
+        <div class="field full"><label for="b-interest">Interested in</label>
+          <select id="b-interest" name="interest" required>
+            <option value="">Choose…</option>
+            <option>Referral Network</option><option>24/7 Smart System</option>
+            <option>Systems Consulting</option><option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field full"><label for="b-notes">Anything we should know? (optional)</label><textarea id="b-notes" name="notes" placeholder="Team size, best times to call, biggest headache right now…"></textarea></div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Request my call</button>
+        <span class="form-note">We'll reply within one business day.</span>
+      </div>
+      <div class="form-status" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="site.js"></script>
+</body>
+</html>
